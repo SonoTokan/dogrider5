@@ -1,0 +1,6 @@
+{
+  "name": "大狗骑自行车5",
+  "description": "奇趣横生的横版自行车动作冒险游戏：16位专属狗骑士、4大模式、10级阶梯难度、轴心国无限火力与全成就图鉴。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
