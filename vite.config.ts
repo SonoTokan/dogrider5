@@ -3,8 +3,12 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig} from 'vite';
 
-export default defineConfig(() => {
+export default defineConfig(({ command }) => {
+  const rawBase = process.env.VITE_BASE_PATH || (command === 'build' ? './' : '/');
+  const base = rawBase.endsWith('/') ? rawBase.replace(/\/+$/, '/') : `${rawBase}/`;
+
   return {
+    base,
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
